@@ -1,0 +1,56 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function verified() {
+      return signedIn() && request.auth.token.email_verified == true;
+    }
+
+    function hasRole(role) {
+      return verified() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == role;
+    }
+
+    function staff() {
+      return hasRole('admin') || hasRole('recovery_officer');
+    }
+
+    match /users/{userId} {
+      allow create: if verified() &&
+        userId == request.auth.uid &&
+        request.resource.data.uid == request.auth.uid &&
+        request.resource.data.email == request.auth.token.email &&
+        request.resource.data.role == 'student';
+      allow read: if verified() && (userId == request.auth.uid || staff());
+      allow update, delete: if hasRole('admin');
+    }
+
+    match /items/{itemId} {
+      allow read: if verified();
+      allow create: if verified() &&
+        request.resource.data.ownerUid == request.auth.uid &&
+        request.resource.data.status == 'open';
+      allow update: if staff() &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status']);
+      allow delete: if hasRole('admin');
+    }
+
+    match /claims/{claimId} {
+      allow read: if verified() &&
+        (resource.data.claimantUid == request.auth.uid || staff());
+      allow create: if verified() &&
+        request.resource.data.claimantUid == request.auth.uid &&
+        request.resource.data.status == 'pending';
+      allow update: if staff() &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'status', 'reviewedBy', 'reviewedAt'
+        ]) &&
+        request.resource.data.reviewedBy == request.auth.uid;
+      allow delete: if hasRole('admin');
+    }
+  }
+}

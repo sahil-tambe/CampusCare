@@ -1,4 +1,4 @@
-# CAMPUSCARE
+# CAMPUSCAREe
 # SYSTEM DESIGN DOCUMENT (SDD)
 ## Version 1.0 – Technical Architecture & Development Blueprint
 

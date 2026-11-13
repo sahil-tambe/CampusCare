@@ -156,9 +156,9 @@ Enable the following services:
 - Firebase Authentication – Email/Password provider.
 - Cloud Firestore Database.
 
-Configure your Firebase Web App credentials in `script.js`.
+Copy `firebase-config.example.js` to `firebase-config.js`, then add your Firebase Web App configuration to `firebase-config.js`.
 
-**Note:** Do not commit private credentials or sensitive configuration to a public repository. Apply appropriate Firebase Security Rules before using the application.
+`firebase-config.js` is ignored by Git and must not be committed. Firebase web API keys are client-side identifiers rather than server secrets, but restrict them in Google Cloud and apply appropriate Firebase Security Rules before using the application.
 
 ### 4. Run the Application
 

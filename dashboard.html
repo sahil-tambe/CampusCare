@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | CampusCare</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                CampusCare
+            </a>
+
+            <button id="logoutButton" class="btn btn-outline-primary">
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+
+        <section class="mb-5">
+            <p class="section-label">STUDENT DASHBOARD</p>
+            <h2>Welcome, <span id="studentName">Student</span>!</h2>
+            <p>Manage your lost and found activities from here.</p>
+            <p class="small text-muted" id="studentEmail"></p>
+        </section>
+
+        <section class="row g-3">
+
+            <div class="col-md-6">
+                <div class="info-card">
+                    <h3>Report Lost Item</h3>
+                    <p>Report something you have lost on campus.</p>
+                    <a href="report-item.html" class="btn btn-primary">
+                        Report an Item
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="info-card">
+                    <h3>Report Found Item</h3>
+                    <p>Help someone recover their missing belongings.</p>
+                    <a href="report-item.html" class="btn btn-primary">
+                        Report an Item
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="info-card">
+                    <h3>Browse Items</h3>
+                    <p>Explore lost and found reports from your campus.</p>
+                    <a href="browse-items.html" class="btn btn-outline-primary">
+                        Browse Items
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="info-card">
+                    <h3>My Claims</h3>
+                    <p>Track the status of your item recovery claims.</p>
+                    <a href="my-claims.html" class="btn btn-outline-primary">
+                        My Claims
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-card">
+                    <h3>My Reports</h3>
+                    <p>View and track the items you have reported.</p>
+                    <a href="my-reports.html" class="btn btn-outline-primary">
+                        My Reports
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="firebase-config.js"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

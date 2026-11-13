@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusCare | Lost & Found</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                CampusCare
+            </a>
+
+            <div class="d-flex gap-2">
+                <a href="login.html" class="btn btn-outline-primary">
+                    Login
+                </a>
+                <a href="signup.html" class="btn btn-primary">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Introduction -->
+    <main>
+        <section class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="fw-bold mb-3">
+                        Lost something on campus?
+                    </h1>
+
+                    <p class="lead">
+                        Find what you've lost. Return what you've found.
+                    </p>
+
+                    <p>
+                        CampusCare helps students report lost and found
+                        items, search for belongings, and connect with
+                        their rightful owners safely.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2 mt-4">
+                        <a href="signup.html" class="btn btn-primary">
+                            Get Started
+                        </a>
+
+                        <a href="#how-it-works" class="btn btn-outline-secondary">
+                            How It Works
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About CampusCare -->
+        <section class="container py-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="section-label">ABOUT CAMPUSCARE</p>
+                    <h2>Making campus a better place, one return at a time.</h2>
+                    <p>
+                        Losing personal belongings on campus can be stressful.
+                        CampusCare provides a common platform where students
+                        can report lost and found items, discover possible
+                        matches and reconnect belongings with their owners.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="py-5" id="how-it-works">
+            <div class="container">
+                <p class="section-label">HOW IT WORKS</p>
+                <h2 class="mb-4">Simple steps. Meaningful returns.</h2>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info-card">
+                            <h3>01. Report</h3>
+                            <p>Submit details about an item you've lost or found.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info-card">
+                            <h3>02. Discover</h3>
+                            <p>Search listings and explore potential item matches.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info-card">
+                            <h3>03. Verify</h3>
+                            <p>Submit a claim and verify ownership through the platform.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info-card">
+                            <h3>04. Recover</h3>
+                            <p>Complete a safe handover and reunite with your belongings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Actions -->
+        <section class="container py-5">
+            <p class="section-label">WHAT YOU CAN DO</p>
+            <h2 class="mb-4">How can we help you today?</h2>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <h3>I Lost Something</h3>
+                        <p>
+                            Report your missing belongings and search
+                            through items reported by other students.
+                        </p>
+                        <a href="signup.html" class="btn btn-outline-primary">
+                            Report Lost Item
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <h3>I Found Something</h3>
+                        <p>
+                            Help another student by reporting an item
+                            you've found on campus.
+                        </p>
+                        <a href="signup.html" class="btn btn-outline-primary">
+                            Report Found Item
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Frequently Asked Questions -->
+        <section class="py-5 faq-section">
+            <div class="container">
+                <p class="section-label">FAQ</p>
+                <h2>Frequently Asked Questions</h2>
+                <p>Here are some things you might want to know about CampusCare.</p>
+
+                <div class="accordion mt-4" id="faqAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+                                Who can use CampusCare?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Students with an eligible Somaiya institutional
+                                email address can register and use CampusCare.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+                                How do I report a lost item?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Register or log in, open the lost-item reporting
+                                section, and provide the relevant item details.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+                                How can I claim a found item?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Submit a claim with identifying information.
+                                The recovery process includes ownership verification.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+                                Is my personal information visible to everyone?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                CampusCare is designed to protect personal
+                                information. Private ownership evidence and
+                                sensitive details are not publicly displayed.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5">
+                                Is CampusCare free to use?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                CampusCare is designed as a free campus
+                                lost-and-found platform.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Experiences -->
+        <section class="container py-5">
+            <p class="section-label">STUDENT COMMUNITY</p>
+            <h2>Built for our campus community.</h2>
+            <p>
+                Every report, every helpful action and every successful
+                handover contributes to a more responsible campus.
+            </p>
+            <p>
+                Be among the first students to experience CampusCare.
+            </p>
+        </section>
+
+
+        <!-- Somaiya Campus -->
+        <section class="py-5 college-section">
+            <div class="container text-center">
+                <p class="section-label">OUR CAMPUS</p>
+                <h2>Made for the Somaiya student community.</h2>
+                <p class="college-name">Somaiya</p>
+                <p>
+                    Bringing students together to make lost-and-found
+                    experiences easier, safer and more organised.
+                </p>
+                <p class="small">
+                    A student-developed academic project.
+                    Not an official Somaiya service.
+                </p>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="container py-5 text-center">
+            <p class="section-label">STAY CONNECTED</p>
+            <h2>Stay in the loop.</h2>
+            <p>Receive CampusCare announcements and important updates.</p>
+
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" id="newsletterEmail" class="form-control" placeholder="Enter your email address"
+                    required>
+                <button type="submit" class="btn btn-primary">
+                    Subscribe
+                </button>
+            </form>
+
+            <p id="newsletterMessage" class="small mt-2"></p>
+        </section>
+
+        <!-- Contact -->
+        <section class="py-5 contact-section">
+            <div class="container text-center">
+                <p class="section-label">CONTACT</p>
+                <h2>Need help with something?</h2>
+                <p>
+                    Have a question or need assistance using CampusCare?
+                    Get in touch with our project team.
+                </p>
+                <p>CampusCare Student Project</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container py-5">
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <h4>CampusCare</h4>
+                    <p>
+                        Lost something? Found something?
+                        Let's bring belongings back to their owners.
+                    </p>
+                </div>
+
+                <div class="col-6 col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="#faqAccordion">FAQs</a></li>
+                        <li><a href="#how-it-works">About Us</a></li>
+                        <li><a href="#newsletterForm">Newsletter</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5>Our Community</h5>
+                    <p>Somaiya Campus</p>
+                    <p>Student-developed project</p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center small">
+                <p>© 2026 CampusCare. All rights reserved.</p>
+                <p>Lost & Found. Connected by Community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="firebase-config.js"></script>
+    <script type="module" src="script.js"></script>
+    <!-- why module and what is it -->
+</body>
+
+</html>

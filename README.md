@@ -160,6 +160,8 @@ Copy `firebase-config.example.js` to `firebase-config.js`, then add your Firebas
 
 `firebase-config.js` is ignored by Git and must not be committed. Firebase web API keys are client-side identifiers rather than server secrets, but restrict them in Google Cloud and apply appropriate Firebase Security Rules before using the application.
 
+The repository includes restrictive rules in `firestore.rules`. Deploy them with `firebase deploy --only firestore:rules` after authenticating the Firebase CLI. If a Firebase key was previously exposed, rotate it and restrict its allowed APIs and referrers in Google Cloud Console.
+
 ### 4. Run the Application
 
 Open the project folder in Visual Studio Code.
